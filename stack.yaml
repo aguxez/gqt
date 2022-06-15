@@ -1,0 +1,13 @@
+resolver: lts-19.11
+system-ghc: true
+resolver:
+  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/19/11.yaml
+packages:
+- .
+extra-deps:
+- morpheus-graphql-0.18.0@sha256:51a3e1c787aaf33b09fe213f64ca73301a444d47ec001d07cd47b56f2ea85329,34541
+- aeson-1.5.6.0@sha256:5003bb6fd260d2e2d5a51dee2bf5c8e8f29e4e0e0288fef805c22dcc80ecab06,6788
+- morpheus-graphql-app-0.18.0@sha256:fdd9b17452e0c17e7464854353fa58626b41ad0520e65938dad198443b416e08,6877
+- morpheus-graphql-code-gen-0.18.0@sha256:c806d4c1d35865b1497fe380625f22f64848136a8d010d916f62ade0b5cb0bd5,2384
+- morpheus-graphql-core-0.18.0@sha256:dcd144af1e9e16a09deb911643545e0c46486b8a16b5d0d612d2df926a78bf51,13878
+- resource-pool-0.3.0.0@sha256:b47dca24af48001d8247cc8a38cd09f148e9b22d959b845bbdb43ebf47ab072a,1280

@@ -1,0 +1,102 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           gqt
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/gqt#readme>
+homepage:       https://github.com/githubuser/gqt#readme
+bug-reports:    https://github.com/githubuser/gqt/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/gqt
+
+library
+  exposed-modules:
+      GQT.Config
+      GQT.DB
+      GQT.Deity
+      GQT.GraphQL.Types.Deity
+  other-modules:
+      Paths_gqt
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , monad-logger
+    , morpheus-graphql
+    , mtl
+    , opaleye
+    , postgresql-simple
+    , product-profunctors
+    , profunctors
+    , resource-pool ==0.3.0.0
+    , scotty
+    , text
+  default-language: Haskell2010
+
+executable gqt-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_gqt
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , gqt
+    , monad-logger
+    , morpheus-graphql
+    , mtl
+    , opaleye
+    , postgresql-simple
+    , product-profunctors
+    , profunctors
+    , resource-pool ==0.3.0.0
+    , scotty
+    , text
+  default-language: Haskell2010
+
+test-suite gqt-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_gqt
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , gqt
+    , monad-logger
+    , morpheus-graphql
+    , mtl
+    , opaleye
+    , postgresql-simple
+    , product-profunctors
+    , profunctors
+    , resource-pool ==0.3.0.0
+    , scotty
+    , text
+  default-language: Haskell2010
